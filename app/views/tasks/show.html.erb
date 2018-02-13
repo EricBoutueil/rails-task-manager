@@ -1,0 +1,8 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+
+<%if @task.completed == true%>
+  <p><%= check_box_tag "task[compeleted]", @task.id, @task.completed %>Task is completed</p>
+<%elsif @task.completed == false%>
+  <p><%= check_box_tag "task[compeleted]", @task.id, @task.completed %> Task is not completed yet</p>
+<% end %>
