@@ -6,3 +6,7 @@
 <%elsif @task.completed == false%>
   <p><%= check_box_tag "task[compeleted]", @task.id, @task.completed %> Task is not completed yet</p>
 <% end %>
+
+<br>
+
+<h2><%= link_to "@Back to list", tasks_path %></h2>
